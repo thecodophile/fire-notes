@@ -8,6 +8,8 @@ plugins {
     // Dagger hilt
     alias(libs.plugins.hilt.android)
 
+    alias { libs.plugins.kotlin.serialization }
+
     id("kotlin-kapt")
 }
 
@@ -85,9 +87,6 @@ dependencies {
 
 //    implementation(libs.firebase.analytics)
 
-
-    // Add the dependencies for any other desired Firebase products
-    // https://firebase.google.com/docs/android/setup#available-libraries
 
     // Coroutine
     implementation(libs.coroutine.android)

@@ -11,8 +11,14 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.rememberNavController
+import com.somnathdey.firenotes.navigation.AuthNavGraph
+import com.somnathdey.firenotes.navigation.BaseNavGraph
 import com.somnathdey.firenotes.ui.theme.FireNotesTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,28 +26,23 @@ class MainActivity : ComponentActivity() {
         setContent {
             FireNotesTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    val navController = rememberNavController()
+                    NavHost(
+                        navController = navController,
+                        startDestination = AuthNavGraph.Destination.Root.route,
+                    ) {
+                        listOf<BaseNavGraph>(
+                            AuthNavGraph
+                        ).forEach {
+                            it.build(
+                                modifier = Modifier
+                                    .padding(innerPadding),
+                                navController, this
+                            )
+                        }
+                    }
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    FireNotesTheme {
-        Greeting("Android")
     }
 }

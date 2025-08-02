@@ -40,7 +40,7 @@ class AuthViewModel @Inject constructor(
     }
 
     fun onToggleChange() {
-        _login.update { it.not() }
+        _isLogin.update { it.not() }
     }
 
     fun login() {
