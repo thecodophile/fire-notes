@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "255787806954",
+    "project_id": "firenotes-542e8",
+    "storage_bucket": "firenotes-542e8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:255787806954:android:80b621c976e09613752793",
+        "android_client_info": {
+          "package_name": "com.somnathdey.firenotes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeEL7h_LL4lksExq0eiueSLoLZDv1LExo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
