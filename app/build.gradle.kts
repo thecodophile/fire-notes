@@ -5,6 +5,10 @@ plugins {
 
     // Add the Google services Gradle plugin
     alias(libs.plugins.google.services)
+    // Dagger hilt
+    alias(libs.plugins.hilt.android)
+
+    id("kotlin-kapt")
 }
 
 android {
@@ -44,6 +48,18 @@ android {
 
 dependencies {
 
+    implementation(project(":auth:ui"))
+    implementation(project(":auth:data"))
+    implementation(project(":auth:domain"))
+
+    implementation(project(":notes:ui"))
+    implementation(project(":notes:data"))
+    implementation(project(":notes:domain"))
+
+    implementation(project(":shared-notes:ui"))
+    implementation(project(":shared-notes:data"))
+    implementation(project(":shared-notes:domain"))
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -72,4 +88,12 @@ dependencies {
 
     // Add the dependencies for any other desired Firebase products
     // https://firebase.google.com/docs/android/setup#available-libraries
+
+    // Coroutine
+    implementation(libs.coroutine.android)
+
+    // Dependency Injection
+    implementation(libs.hilt.android)
+    implementation(libs.androidx.hilt.navigation.compose)
+    kapt(libs.hilt.android.compiler)
 }

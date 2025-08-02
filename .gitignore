@@ -1,15 +1,47 @@
+# Android Studio
+.idea/
 *.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
 .DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+
+# Local config
 local.properties
+
+# Gradle
+.gradle/
+.gradle
+**/build/
+
+# Native / NDK / CMake
+.externalNativeBuild/
+.cxx/
+
+# Captures
+captures/
+
+# Logs and heap dumps
+*.log
+*.hprof
+
+# Kotlin compiler (e.g., Compose)
+.kotlinc/
+.idea/kotlinc.xml
+
+# .idea config files (ignored even if .idea/ is tracked)
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+
+# Lint
+lint/reports/
+lint-baseline.xml
+
+# Firebase (Optional)
+google-services.json
+firebase-debug.log
+
+# APKs (Optional)
+*.apk
+*.ap_
