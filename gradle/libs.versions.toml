@@ -47,6 +47,7 @@ firebase-storage-ktx = { group = "com.google.firebase", name = "firebase-storage
 
 androidx-appcompat = {group = "androidx.appcompat", name ="appcompat", version.ref = "appcompatVersion"}
 coroutine-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutine" }
+coroutine-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutine" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
